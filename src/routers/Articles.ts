@@ -7,6 +7,6 @@ import { readArticle,createArticle,deleteArticle,updateArticle} from "../control
 ArticleRoutes.get("/readArticle",readArticle);
 ArticleRoutes.post("/createArticle",createArticle),
 ArticleRoutes.delete("/deleteArticle/:id",deleteArticle),
-ArticleRoutes.patch("/updatArticle/:id",updateArticle)
+ArticleRoutes.patch("/updateArticle/:id",updateArticle)
 
 export default ArticleRoutes;
