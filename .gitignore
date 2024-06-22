@@ -2,3 +2,7 @@ node_modules
 .env
 package-lock.json
 dist
+dev.db
+dev.db-journal
+
+migrations
