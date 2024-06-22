@@ -19,5 +19,5 @@ model Article {
   title     String
   content   String
   category  String
-  image     String?
+  imageUrl     String?
 }

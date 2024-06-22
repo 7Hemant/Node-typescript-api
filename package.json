@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"tsc -w\" \"nodemon ./dist/app.js\""
+    "dev": "concurrently \"tsc -w\" \"nodemon ./dist/app.js\"",
+    "prisma:db":"npx prisma migrate dev --name $npm_config_name && npx prisma generate"
   },
   "keywords": [],
   "author": "",
