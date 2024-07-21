@@ -1,14 +1,14 @@
-import express,{ Request, Response } from "express";
+import express, { Request, Response } from "express";
 
 import { ArticleRoutes } from "./routers";
-
+import path from "path";
 const app = express();
-app.use(express.json())
+app.use(express.json());
 
-const PORT = 3000 || process.env.PORT
+const PORT = 3000 || process.env.PORT;
+app.use("/api/v1/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/api/v1", ArticleRoutes);
 
-app.use("/api/v1",ArticleRoutes)
-
-app.listen(PORT,()=>{
-    console.log("node-typescipt-api server is live on PORT:",PORT)
-})
+app.listen(PORT, () => {
+  console.log("node-typescipt-api server is live on PORT:", PORT);
+});
